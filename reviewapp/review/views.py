@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework import status
 from rest_framework.response import Response
-from rest_framework.generics import RetrieveUpdateDestroyAPIView
+from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
 from .models import Institute
 from .serializers import InstituteSerializer
 
@@ -31,30 +31,30 @@ class InstituteAPIView(RetrieveUpdateDestroyAPIView):
 		pass
 
 
-class ReviewAPIView(RetrieveUpdateDestroyAPIView):
-	"""Class for get, put, delete API view"""
-	def get(self, request, pk):
-		pass
+# class ReviewAPIView(RetrieveUpdateDestroyAPIView):
+# 	"""Class for get, put, delete API view"""
+# 	def get(self, request, pk):
+# 		pass
 
 
-	def put(self, request, pk):
-		pass
+# 	def put(self, request, pk):
+# 		pass
 
 
-	def delete(self, request, pk):
-		pass
+# 	def delete(self, request, pk):
+# 		pass
 
 
-class ReviewerAPIView(RetrieveUpdateDestroyAPIView):
-	"""Class for get, put, delete API view"""
-	def get(self, request, pk):
-		pass
+# class ReviewerAPIView(RetrieveUpdateDestroyAPIView):
+# 	"""Class for get, put, delete API view"""
+# 	def get(self, request, pk):
+# 		pass
 
 
-	def put(self, request, pk):
-		pass
+# 	def put(self, request, pk):
+# 		pass
 
 
-	def delete(self, request, pk):
-		pass
+# 	def delete(self, request, pk):
+# 		pass
 

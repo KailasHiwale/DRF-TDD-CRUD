@@ -129,6 +129,7 @@ class Institute(models.Model):
     founded_in = models.IntegerField(blank=True, null=True)
     affiliated_to = models.CharField(max_length=150, blank=True, null=True)
     approved_by = models.CharField(max_length=254, blank=True, null=True)
+    owner = models.ForeignKey(AuthUser, models.DO_NOTHING, db_column='owner')
 
     class Meta:
         managed = False
