@@ -18,6 +18,7 @@ from django.urls import include, path
 
 app_urls = [
     path('review/', include('review.urls')),
+    path('user/', include('user.urls')),
 ]
 
 urlpatterns = [
