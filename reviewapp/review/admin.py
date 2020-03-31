@@ -23,6 +23,5 @@ class InstituteAdmin(admin.ModelAdmin):
     list_filter = ('institute_type', 'affiliated_to', 'approved_by',)
     search_fields = ('institute_name',)
 
+
 admin.site.register(Institute, InstituteAdmin)
-# admin.site.register(Reviewer)
-# admin.site.register(Review)
