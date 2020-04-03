@@ -20,8 +20,8 @@ It helps in understanding the implementation of following features
 
 ## Endpoints
 
-Endpoint |HTTP Method | CRUD Operation
--- | -- |-- |--
+Endpoint | HTTP Method | CRUD Operation
+-- | -- |-- 
 `api/review/institute/` | POST, GET | Create, Retrieve ALL
 `api/review/institute/{id}/` | GET, PUT, DELETE | Retrieve, Update, Destroy
 `api/user/` | POST | Create User
