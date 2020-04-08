@@ -5,7 +5,12 @@ from .views import RegistrationAPIView, LoginAPIView, TokenAPIView
 
 
 class RegistrationAPIViewTestCase(APITestCase):
-	pass
+	
+	def set_up(self):
+		self.username = 'kailas'
+		self.email = 'hiwale.kb@gmail.com'
+		self.password = 'kailas123'
+		self.token = 'token'
 
 
 class LoginAPIViewTestCase(APITestCase):
