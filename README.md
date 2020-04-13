@@ -28,7 +28,21 @@ Endpoint | HTTP Method | CRUD Operation
 `api/user/` | POST | Create User
 `api/user/login/` | GET | Login User
 
-## Test Cases for -
+## Authentication
+
+# GET Token
+
+The simplest way we can get a token is -
+```
+python manage.py drf_create_token tyrian
+```
+
+### Pagination
+..
+
+## Test Driven Development
+
+# Test Cases for:
 
 1. Verification of user registration with invalid password.
 2. Verification of user registration with valid data.
@@ -43,6 +57,11 @@ Endpoint | HTTP Method | CRUD Operation
 11. Update an institute.
 12. Partial update of an institute.
 13. Delete an institute with given id.
+
+# Run:
+```
+python manage.py test
+```
 
 ## Usage
 We can call the API using [postman](https://www.postman.com/) or [curl](https://curl.haxx.se/) or [httpie](https://github.com/jakubroztocil/httpie#installation). 
@@ -84,13 +103,3 @@ shttp http://127.0.0.1:8000/api/review/institute/1/ "Authorization: Token 39643b
 ..
 
 Note: Authorization token is required as we are using token based authentication.
-
-## GET Token
-
-The simplest way we can get a token is -
-```
-python manage.py drf_create_token kailas
-```
-
-### Pagination
-..
