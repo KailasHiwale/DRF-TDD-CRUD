@@ -1,6 +1,6 @@
 # DRF-TDD-CRUD
 A minimal implementation of REST API using [Django REST framework](http://www.django-rest-framework.org/).
-Idia behind this demonstrative project is to understanding the implementation of following features
+This is a demonstrative project to understand the implementation of following features in RESTFull web services:
 - django project configuration for installed apps, database, authentication, testing etc.
 - Creating MSV (Models, Serializers, Views) as per DRF API guidelines.
 - Common customization for django admin interface and urls.  
@@ -16,7 +16,7 @@ Idia behind this demonstrative project is to understanding the implementation of
 
 ## Installation
 ```
-	pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 ## Endpoints
@@ -60,7 +60,7 @@ python manage.py runserver
 ```
 - Access API -
 ```
-	http http://127.0.0.1:8000/api/review/institute/1/ "Authorization: Token 39643b8bec57a7288ff4b68ce7199c9398ae7699"
+shttp http://127.0.0.1:8000/api/review/institute/1/ "Authorization: Token 39643b8bec57a7288ff4b68ce7199c9398ae7699"
 ```
 - Response:
 ```
