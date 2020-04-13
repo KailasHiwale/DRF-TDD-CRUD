@@ -30,7 +30,7 @@ Endpoint | HTTP Method | CRUD Operation
 
 ## Authentication
 
-# GET Token
+- GET Token
 
 The simplest way we can get a token is -
 ```
@@ -42,7 +42,7 @@ python manage.py drf_create_token tyrian
 
 ## Test Driven Development
 
-# Test Cases for:
+- Test Cases for -
 
 1. Verification of user registration with invalid password.
 2. Verification of user registration with valid data.
@@ -58,7 +58,8 @@ python manage.py drf_create_token tyrian
 12. Partial update of an institute.
 13. Delete an institute with given id.
 
-# Run:
+- Run Test Cases
+
 ```
 python manage.py test
 ```
@@ -67,9 +68,19 @@ python manage.py test
 We can call the API using [postman](https://www.postman.com/) or [curl](https://curl.haxx.se/) or [httpie](https://github.com/jakubroztocil/httpie#installation). 
 
 1. Postman
-..
+- Install the postman
+```
+sudo snap install postman
+```
+- Start the django server
+```
+python manage.py runserver
+```
+3. Select request type, Set headers and send request
+![postman screen](https://github.com/KailasHiwale/DRF-TDD-CRUD/img.png)
+
 2. httpie
-- Install httpie using pip -
+- Install httpie using pip
 ```
 pip install httpie
 ```
@@ -91,7 +102,7 @@ shttp http://127.0.0.1:8000/api/review/institute/1/ "Authorization: Token 39643b
     "office_mail": "coep@ceop.com",
     "phone_number": null,
     "website": null,
-    "institute_type": "GO",
+    "institute_type": "GO", 
     "founded_in": null,
     "affiliated_to": null,
     "approved_by": null,
