@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework.authtoken',
+    'django_nose',
     'review',
     'user',
 ]
@@ -127,6 +128,15 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# django-nose to run all tests
+TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
+
+# Tell django-nose to measure coverage on apps
+NOSE_ARGS = [
+    '--with-coverage',
+    '--cover-package=user,review',
+]
 
 # Rest Framwork configuration
 REST_FRAMEWORK = {

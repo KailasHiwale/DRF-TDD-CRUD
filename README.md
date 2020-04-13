@@ -1,22 +1,23 @@
 # DRF-TDD-CRUD
 A minimal implementation of REST API using [Django REST framework](http://www.django-rest-framework.org/).
-It helps in understanding the implementation of following features
-- django project configuration and admin interface.
-- models, serializers, views and urls.
-- Token Authentication
-- Pagination
-- Test Driven Development
+Idia behind this demonstrative project is to understanding the implementation of following features
+- django project configuration for installed apps, database, authentication, testing etc.
+- Creating MSV (Models, Serializers, Views) as per DRF API guidelines.
+- Common customization for django admin interface and urls.  
+- User request Authentication using Token Authentication and Permission policy. 
+- Customizable Pagination which allow you to split large result sets into individual pages.
+- Test Driven Development.
 
 ## Requirements
 - Python 3.6.9
 - Django==3.0.4
 - djangorestframework==3.11.0
+- django-nose==1.4.6
 
 ## Installation
 ```
 	pip install -r requirements.txt
 ```
-
 
 ## Endpoints
 
@@ -27,15 +28,27 @@ Endpoint | HTTP Method | CRUD Operation
 `api/user/` | POST | Create User
 `api/user/login/` | GET | Login User
 
-## Test Cases
-- Test 1
-- Test 2
+## Test Cases for -
+
+1. Verification of user registration with invalid password.
+2. Verification of user registration with valid data.
+3. Verification of user registration with unique username validation.
+4. User login without password authentication.
+5. User logn with password authentication.
+6. User login with valid credentials.
+7. Endpoint validation
+8. Create institute.
+9. List institutes.
+10. Retrieve an institutes with given id.
+11. Update an institute.
+12. Partial update of an institute.
+13. Delete an institute with given id.
 
 ## Usage
 We can call the API using [postman](https://www.postman.com/) or [curl](https://curl.haxx.se/) or [httpie](https://github.com/jakubroztocil/httpie#installation). 
 
 1. Postman
-content
+..
 2. httpie
 - Install httpie using pip -
 ```
@@ -66,33 +79,18 @@ python manage.py runserver
     "owner": 1
 }
 ```
-Note: Authorization token is required as we are using token based authentication.
 
 3. curl
-content
+..
 
-## Login and Tokens
+Note: Authorization token is required as we are using token based authentication.
 
-To get a token first we have to login
-```
-	http http://127.0.0.1:8000/rest-auth/login/ username="admin" password="root1234"
-```
-after that, we get the token
-```
-{
-    "key": "2d500db1e51153318e300860064e52c061e72016"
-}
-```
-**ALL request must be authenticated with a valid token, otherwise they will be invalid**
+## GET Token
 
-We can create new users. (password1 and password2 must be equal)
+The simplest way we can get a token is -
 ```
-http POST http://127.0.0.1:8000/rest-auth/registration/ username="USERNAME" password1="PASSWORD" password2="PASSWORD"
-```
-And we can logout, the token must be your actual token
-```
-http POST http://127.0.0.1:8000/rest-auth/logout/ "Authorization: Token <YOUR_TOKEN>" 
+python manage.py drf_create_token kailas
 ```
 
 ### Pagination
-content
+..
