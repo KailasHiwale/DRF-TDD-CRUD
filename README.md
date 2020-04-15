@@ -123,7 +123,7 @@ sudo snap install postman
 python manage.py runserver
 ```
 - Select request type, Set headers and send request
-` `
+`.`
 ![postman screen](https://github.com/KailasHiwale/DRF-TDD-CRUD/blob/master/img.png)
 
 ### httpie
