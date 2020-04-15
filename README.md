@@ -42,7 +42,7 @@ INSTALLED_APPS = [
 
     # Third party Apps
     'rest_framework',
-    'rest_framework.authtoken',
+    'rest_framework.authtoken',  # here
     'django_nose',
 
     # Local Apps
@@ -51,9 +51,11 @@ INSTALLED_APPS = [
 ]
 
 REST_FRAMEWORK = {
+    ...
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework.authentication.TokenAuthentication',
     ),
+    ...
 }
 ```
 
@@ -67,8 +69,10 @@ python manage.py drf_create_token tyrian
 Pagination allows you to control how many objects per page to be returned. To enable it add the following lines to REST_FRAMEWORK dictionary in `reviewapp/settings.py`
 ```
 REST_FRAMEWORK = {
+    ...
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 10
+    ...
 }
 ```
 
@@ -90,6 +94,16 @@ REST_FRAMEWORK = {
 12. Partial update of an institute.
 13. Delete an institute with given id.
 
+### Setting the default format
+You can set the test request default format by adding a `TEST_REQUEST_DEFAULT_FORMAT` key in `REST_FRAMEWORK` cofig. dictionary in your `reviewapp/settings.py`
+```
+REST_FRAMEWORK = {
+    ...
+    'TEST_REQUEST_DEFAULT_FORMAT': 'json'
+    ...
+}
+```
+
 ### Run Test Cases
 
 ```
@@ -97,7 +111,7 @@ python manage.py test
 ```
 
 ## Usage
-We can call the API using [postman](https://www.postman.com/) or [curl](https://curl.haxx.se/) or [httpie](https://github.com/jakubroztocil/httpie#installation). 
+There are multiple ways to call the API, such as [postman](https://www.postman.com/), [curl](https://curl.haxx.se/), [httpie](https://github.com/jakubroztocil/httpie#installation). 
 
 ### Postman
 - Install the postman
@@ -123,7 +137,7 @@ python manage.py runserver
 ```
 - Access API -
 ```
-shttp http://127.0.0.1:8000/api/review/institute/1/ "Authorization: Token 39643b8bec57a7288ff4b68ce7199c9398ae7699"
+shttp http://127.0.0.1:8000/api/review/institute/2/ "Authorization: Token 39643b8bec57a7288ff4b68ce7199c9398ae7699"
 ```
 - Response:
 ```
