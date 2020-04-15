@@ -31,16 +31,20 @@ ALLOWED_HOSTS = ['*']
 
 # Application definition
 
-INSTALLED_APPS = [
+    INSTALLED_APPS = [
+    # Django Apps
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # Django Rest Framework Apps
     'rest_framework',
     'rest_framework.authtoken',
+    # Third party Apps
     'django_nose',
+    # Local Apps
     'review',
     'user',
 ]

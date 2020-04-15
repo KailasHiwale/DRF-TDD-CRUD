@@ -9,7 +9,7 @@ This is a demonstrative project to understand the implementation of following fe
 - Test Driven Development.
 
 ## Requirements
-- Python 3.6.9
+- Python==3.6.9
 - Django==3.0.4
 - djangorestframework==3.11.0
 - django-nose==1.4.6
@@ -28,7 +28,7 @@ Endpoint | HTTP Method | CRUD Operation
 `api/user/login/` | GET | Login User
 
 ## Authentication
-We need to do following changes in `reviewapp/settings.py/` in order to enable token authentication
+We need to do following changes in `reviewapp/settings.py` in order to enable token authentication.
 ***First*** add `restframework.authtoken` to your `INSTALLED_APPS`. ***Second*** add the `TokenAuthentication` to `REST_FRAMEWORK`
 ```
 INSTALLED_APPS = [
@@ -109,6 +109,7 @@ sudo snap install postman
 python manage.py runserver
 ```
 - Select request type, Set headers and send request
+` `
 ![postman screen](https://github.com/KailasHiwale/DRF-TDD-CRUD/blob/master/img.png)
 
 ### httpie
