@@ -25,7 +25,9 @@ Endpoint | HTTP Method | CRUD Operation
 `api/review/institute/` | POST, GET | Create, Retrieve ALL
 `api/review/institute/{id}/` | GET, PUT, DELETE | Retrieve, Update, Destroy
 `api/user/` | POST | Create User
-`api/user/login/` | GET | Login User
+`api/user/login/` | POST | Login User
+`get-token/` | POST | Request a token
+
 
 ## Authentication
 We need to do following changes in `reviewapp/settings.py` in order to enable token authentication.
@@ -59,10 +61,14 @@ REST_FRAMEWORK = {
 }
 ```
 
-### GET Token
-The simplest way we can get a token is -
+### GET a Token
+The simplest ways we can get a token are -
 ```
 python manage.py drf_create_token tyrian
+```
+Or by using httpie
+```
+http post http://127.0.0.1:8000/get-token/ username=kailas password=kailas123
 ```
 
 ## Pagination
@@ -137,7 +143,7 @@ python manage.py runserver
 ```
 - Access API -
 ```
-shttp http://127.0.0.1:8000/api/review/institute/2/ "Authorization: Token 39643b8bec57a7288ff4b68ce7199c9398ae7699"
+http http://127.0.0.1:8000/api/review/institute/2/ "Authorization: Token 39643b8bec57a7288ff4b68ce7199c9398ae7699"
 ```
 - Response:
 ```

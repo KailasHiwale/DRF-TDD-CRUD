@@ -19,7 +19,7 @@ class RegistrationSerializer(serializers.ModelSerializer):
 		if attrs.get('password') != attrs.get('confirm_password'):
 			raise serializers.ValidationError('Password does not matched.')
 		del attrs['confirm_password']
-		agrs['password'] = make_password(attrs['password'])
+		attrs['password'] = make_password(attrs['password'])
 		return attrs
 
 
