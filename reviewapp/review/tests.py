@@ -1,6 +1,5 @@
 import json
 from django.urls import reverse
-from django.test import TestCase
 from django.contrib.auth.models import User
 from rest_framework.auth_token.models import Token
 from rest_framework.test import APITestCase
